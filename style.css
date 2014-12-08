@@ -1,0 +1,81 @@
+html, body {
+    min-height:100%;
+}
+body {
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:0;
+    font-family:'Courier';
+    font-size:11px;
+    font-weight:600;
+    background-color:#002240;
+    color:white;
+}
+
+#page-1 {
+    position:relative;
+    display:none;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+body.loaded #page-1 {
+    display:block;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+}
+
+.wrap {
+    text-align:center;
+    top: calc(50% - 100px);
+    position: absolute;
+    width: 100%;
+}
+.yellow {
+    color:#ffdd00;
+}
+.word {
+    display:inline-block;
+}
+.letter {
+    float:left;
+    margin-right:30px;
+    text-align:left;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
