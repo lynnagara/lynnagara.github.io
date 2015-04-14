@@ -1,0 +1,22 @@
+{
+  "name": "chess",
+  "version": "1.0.0",
+  "description": "A chess app written in Javascript",
+  "main": "main.js",
+  "author": "Lyn Nagara",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-mocha": "^0.1.10",
+    "karma-requirejs": "^0.2.2",
+    "karma-sinon": "^1.0.4",
+    "mocha": "^2.2.1",
+    "requirejs": "^2.1.16",
+    "sinon": "^1.13.0"
+  },
+  "dependencies": {
+    "requirejs": "^2.1.16"
+  }
+}

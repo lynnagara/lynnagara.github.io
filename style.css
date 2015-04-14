@@ -8,16 +8,49 @@ body {
     right:0;
     left:0;
     margin:0;
-    font-family:'Courier';
+    font-family:'Courier', monospace;
     font-size:11px;
     font-weight:600;
     background-color:#002240;
     color:white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hidden {
+    display: none;
+}
+
+::selection {
+  background: #fd664b;
+}
+::-moz-selection {
+  background: #fd664b;
+}
+
+.rotate-90 {
+    float:left;
+    -webkit-transform: rotate(90deg);
+}
+
+
+a {
+    color:#fd664b;
+    text-decoration:none;
+}
+a:hover, a:active {
+    color:#fd310d;    
+}
+
+.font-2x {
+    font-size:22px;
+    line-height:1.6em;
 }
 
 #page-1 {
     position:relative;
     display:none;
+    margin-bottom:40px;
 }
 
 @keyframes fadein {
@@ -56,9 +89,11 @@ body.loaded #page-1 {
 
 .wrap {
     text-align:center;
-    top: calc(50% - 100px);
-    position: absolute;
     width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    padding: 40px 40px 0 40px;
+    text-align:left;
 }
 .yellow {
     color:#ffdd00;
@@ -70,6 +105,7 @@ body.loaded #page-1 {
     float:left;
     margin-right:30px;
     text-align:left;
+    margin-bottom:20px;
 }
 .clearfix:before,
 .clearfix:after {
@@ -78,4 +114,17 @@ body.loaded #page-1 {
 }
 .clearfix:after {
     clear: both;
+}
+
+ul#games-list {
+    margin:0;
+    padding-left:30px;
+    list-style-type:none;
+    font-size:18px;
+    line-height:1.3em;
+}
+
+ul#games-list a {
+    font-weight: 400;
+    color: #fff;
 }
