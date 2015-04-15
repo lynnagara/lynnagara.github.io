@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="app.css" />
+	<script src="lib/jquery-1.11.0.min.js"></script>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+	<!-- Page title -->
+	<h1>Tic Tac Toe</h1>
+
+	<!-- Hint -->
+	<div id="notice"><span></span></div>
+
+	<!-- Initial game questions -->
+	<section id="questions">
+		<form id="form_qns">
+			<div class="question">
+				<div class="qn">What is your name?</div>
+				<input type="text" id="player_name"></input>
+			</div>
+			<div class="question">
+				<div class="qn">What level do you want to play?</div>
+				<select name="level" id="level">
+				  <option value="easy">Easy</option>
+				  <option value="hard">Hard</option>
+				</select>
+			</div>
+			<div class="question">
+				<input id="btn_start" type="submit" value="Start playing" name="submit"></input>
+			</div>
+		</form>
+	</section>
+
+	<section id="game">
+		<div class="col">
+			<!-- Board -->
+			<div id="board">
+				<div class="row">
+					<div class="tile-col"><a class="tile" href="" data-tile="1"></a></div>
+					<div class="tile-col"><a class="tile" href="" data-tile="2"></a></div>
+					<div class="tile-col"><a class="tile" href="" data-tile="3"></a></div>
+				</div>
+				<div class="row">
+					<div class="tile-col"><a class="tile" href="" data-tile="4"></a></div>
+					<div class="tile-col"><a class="tile" href="" data-tile="5"></a></div>
+					<div class="tile-col"><a class="tile" href="" data-tile="6"></a></div>
+				</div>
+				<div class="row">
+					<div class="tile-col"><a class="tile" href="" data-tile="7"></a></div>
+					<div class="tile-col"><a class="tile" href="" data-tile="8"></a></div>
+					<div class="tile-col"><a class="tile" href="" data-tile="9"></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<!-- Game information -->
+			<div id="game_info">
+				<div class="legend">
+					<div class="player">You</div>
+					<div class="computer">Computer</div>
+					<div class="current_level">Current level:</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Winning screen -->
+	<section id="won">
+		<h2>Congratulations you won!</h2>
+		<a class="replay" href="#">Play again?</a>
+
+	</section>
+	<!-- Losing screen -->
+	<section id="lost">
+		<h2>Sorry you lost!</h2>
+		<a class="replay" href="#">Play again?</a>
+	</section>
+
+	<!-- Draw screen -->
+	<section id="draw">
+		<h2>It's a draw, my friend</h2>
+		<a class="replay" href="#">Why dontcha play again?</a>
+	</section>
+
+
+	<script src="app.js"></script>
+
+</body>
+
+</html>

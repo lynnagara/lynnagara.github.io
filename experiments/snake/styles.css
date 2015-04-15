@@ -1,0 +1,131 @@
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+}
+
+body {
+	text-align:center;
+	background-color:#f2f2f2;
+	font-family:'Helvetica Neue', sans-serif;
+	font-size:14px;
+}
+
+#message {
+	font-size: 17px;
+	line-height: 1.8em;
+	margin-bottom: 18px;
+	font-weight:700;
+}
+
+div#left {
+	float:left;
+	width:320px;
+	margin:14px 0 14px 14px;
+}
+div#left a.button {
+	border:1px solid #666;
+	display:block;
+	padding:12px;
+	background-color:#77cc33;
+	color:#1f2439;
+	text-decoration:none;
+	margin-bottom:8px;
+}
+div#left a.button.inactive {
+	background-color:#c9ebad;
+	border:1px solid white;
+	color:#666;
+	cursor:default;
+}
+
+div#left div.score {
+	font-size:18px;
+	font-style:italic;
+	margin:24px 0;
+}
+div#left div.score .label {
+	color:#aaa;
+}
+div#left div.score .number {
+	color:#222;
+	font-size:50px;
+}
+
+
+div#logo {
+	margin-bottom:20px;
+}
+div#logo .box {
+	float:left;
+	width:10px;
+	height:10px;
+	border:1px solid transparent;
+}
+div#logo .box.solid {
+	border-bottom:1px solid #f2f2f2;
+	border-right:1px solid #f2f2f2;
+	background-color:#14adc4;
+}
+
+
+div#right {
+	float:left;
+	position:relative;
+	margin:14px;
+}
+
+canvas {
+	display:block;
+	background-color:#1f2439;
+	color:#14adc4;
+	margin:0 auto;
+	padding:0;
+}
+
+canvas.blurred {
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px); 
+	-ms-filter: blur(2px);
+	filter: blur(2px);
+}
+
+#overlay {
+	position:absolute;
+	display:table;
+	width: 100%;
+	color:#ec5823;
+	top:0;
+	text-transform:uppercase;
+	font-weight:700;
+	font-size:24px;
+}
+
+#message-overlay {
+	display: table-cell;
+	vertical-align: middle;
+	padding:0 70px;
+}
+
+#gameover a {
+	color:#ca6938;
+}
+#gameover.show {
+	display:block;
+	font-size:15px;
+}
+#gameover.hide {
+	display:none;
+}
+
+/* Micro clearfix hack by Nicolas Gallagher */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
