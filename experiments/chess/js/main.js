@@ -37,6 +37,7 @@ Game.prototype.initialise = function () {
   this.sourceLink.style.marginTop = '20px';
   this.sourceLink.innerHTML = '<p>Source: <a href="https://github.com/lynnagara/chess" target="_blank">Github</a></p>';
   document.body.appendChild(this.sourceLink);
+
 }
 
 function initialise () {

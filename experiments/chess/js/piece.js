@@ -250,9 +250,9 @@ Piece.prototype.squaresAreEmpty = function (tilesArr, playerPieces, opponentPiec
   });
 }
 
-// Promotes the piece to queen
-Piece.prototype.promoteToQueen = function (tile, board) {
-  this.piece.name = 'queen';
+// Promotes the piece
+Piece.prototype.promoteToQueen = function (tile, board, newPiece) {
+  this.piece.name = newPiece;
   this.image.src = 'images/' + this.color + '/' + this.piece.name + '.svg';
   this.render(tile, tile, board);
 }

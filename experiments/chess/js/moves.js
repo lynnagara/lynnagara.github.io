@@ -214,13 +214,18 @@ Moves.prototype.movePiece = function (from, newpos, player, opponent, dontSwitch
     captured.renderCaptured(player, opponent);
   }
 
-  // Pawn always becomes queen
+  // Pawn becomes queen by default
   if (from.name === 'pawn') {
     var targetRow;
+    var validPieces = ['queen', 'rook', 'knight', 'bishop'];
     player.playForwardDirection ? targetRow = 8 : targetRow = 1;
     if (parseInt(newpos.split('')[1]) === targetRow) {
-      player.pieces[idx].name = 'queen';
-      player.piecesList[idx].promoteToQueen(newpos, this.board);
+      var newPiece = prompt("Select a piece (type 'queen', 'rook', 'knight', 'bishop')");
+      if (validPieces.indexOf(newPiece) === -1) {
+        newPiece = 'queen';
+      }
+      player.pieces[idx].name = newPiece;
+      player.piecesList[idx].promoteToQueen(newpos, this.board, newPiece);
     }
   }
 
