@@ -39,11 +39,6 @@ body {
   color: #dfdfdf;
 }
 
-.text-start-game {
-  font-size: 0.7em;
-  color: #0a0a0a;
-}
-
 /* Mobile */
 
 @media (max-width: 800px) {
